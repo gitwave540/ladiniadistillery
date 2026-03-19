@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distillometer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="HomeVideo.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <!-- Logo -->
+    <a href="index.html">
+        <img src="Logo_LD-removebg-preview.png" alt="Ladinia Logo" id="fixed-logo">
+    </a>
+    <!-- Calculator Container -->
+    <div class="container">
+        <h2>Promille Calculator</h2>
+        <div class="input-group">
+            <label for="liter">Flüssigkeit vorhanden in Liter:</label>
+            <input type="number" id="liter" placeholder="e.g., 100" required>
+        </div>
+        <div class="input-group">
+            <label for="promille">Flüssigkeit vorhanden in Promille:</label>
+            <input type="number" id="promille" placeholder="e.g., 46" required>
+        </div>
+        <div class="input-group">
+            <label for="targetPromille">Zu erreichende gesammt in Promille:</label>
+            <input type="number" id="targetPromille" placeholder="e.g., 34" required>
+        </div>
+        <div class="input-group">
+            <label for="addedPromille">Zugefügte Flüssigkeit in Promille:</label>
+            <input type="number" id="addedPromille" placeholder="e.g., 0" required>
+        </div>
+        <div class="input-group">
+            <label for="temperature">Aktuelle Temperatur in °C (20° als Standard):</label>
+            <input type="number" id="temperature" placeholder="20" value="20" required>
+        </div>
+        <button onclick="calculate()">Berechnen</button>
+
+        <div id="results" class="result" style="display:none;">
+            <p><strong>Beizufügende Liter:</strong> <span id="addedLiters"></span> l</p>
+            <p><strong>Totales Liter:</strong> <span id="totalLiters"></span> l</p>
+            <p><strong>Totales Promille:</strong> <span id="totalPromille"></span> ‰</p>
+            <img id="resultImage" src="Logo_LD-removebg-preview.png" alt="Logo">
+        </div>
+
+        <div id="philosophy" class="philosophy" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
