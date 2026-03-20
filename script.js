@@ -124,7 +124,7 @@ function removeIdle() {
 function resetTimer() {
     clearTimeout(timeout);
     removeIdle();
-    timeout = setTimeout(setIdle, 5000);
+    timeout = setTimeout(setIdle, 30000);
 }
 
 // Events
