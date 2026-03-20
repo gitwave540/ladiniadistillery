@@ -102,3 +102,37 @@
             document.getElementById("philosophy").textContent = randomQuote;
             document.getElementById("philosophy").style.display = "block";
         }
+// ==============================
+// IDLE / CINEMA MODE
+// ==============================
+let timeout;
+
+const content = document.querySelector(".content");
+const logo = document.getElementById("fixed-logo");
+const video = document.getElementById("bg-video");
+
+function setIdle() {
+    if (content) content.classList.add("idle");
+    if (logo) logo.classList.add("idle");
+    if (video) video.classList.add("idle-video"); // 🎬 Video hervorheben
+}
+
+function removeIdle() {
+    if (content) content.classList.remove("idle");
+    if (logo) logo.classList.remove("idle");
+    if (video) video.classList.remove("idle-video");
+}
+
+function resetTimer() {
+    clearTimeout(timeout);
+    removeIdle();
+    timeout = setTimeout(setIdle, 5000);
+}
+
+// Events
+["mousemove", "click", "keydown", "scroll"].forEach(event => {
+    document.addEventListener(event, resetTimer);
+});
+
+// Start
+resetTimer();
