@@ -173,11 +173,6 @@ button:hover::after {
 #bg-video {
     transition: filter 1s ease;
 }
-
-/* Cinema Mode */
-#bg-video.idle-video {
-    filter: brightness(.88) blur(1px);
-}
 .content, #fixed-logo {
     transition: opacity 0.8s ease, filter 0.8s ease;
 }
