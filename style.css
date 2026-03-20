@@ -25,6 +25,8 @@ h1 {
     height: 100%;
     object-fit: cover;
     z-index: -2;
+    filter: brightness(0.8) blur(1px);
+    transition: filter 1s ease;
 }
 
 .overlay {
@@ -170,3 +172,19 @@ button:hover::after {
 .language-buttons {
     margin-top: 20px;
 }
+#bg-video {
+    transition: filter 1s ease;
+}
+
+/* Cinema Mode */
+#bg-video.idle-video {
+    filter: brightness(1) blur(0px);
+}
+.content, #fixed-logo {
+    transition: opacity 0.8s ease, filter 0.8s ease;
+}
+
+.idle {
+    opacity: 0;
+    pointer-events: none;
+} 
