@@ -26,6 +26,8 @@ h1 {
     object-fit: cover;
     z-index: -2;
 
+    filter: brightness(0.95) blur(.5px);
+    transition: filter 1s ease;
 }
 
 .overlay {
@@ -186,4 +188,5 @@ button:hover::after {
 .idle {
     opacity: 0;
     pointer-events: none;
-} 
+}           
+
