@@ -3,7 +3,7 @@
             const alpha = 0.001; // Volumenausdehnung pro °C
             return 1 + alpha * (temperature - 20);
         }
-        const correctionFactor = getCorrectionFactor(temperature);
+
         
     
         // Array of philosophical quotes
