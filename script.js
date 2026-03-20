@@ -4,8 +4,6 @@
             return 1 + alpha * (temperature - 20);
         }
 
-        
-    
         // Array of philosophical quotes
         const quotes = [
             "Distillation: where science turns raw nature into liquid gold.",
