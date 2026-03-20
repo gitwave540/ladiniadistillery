@@ -25,9 +25,6 @@ h1 {
     height: 100%;
     object-fit: cover;
     z-index: -2;
-
-    filter: brightness(0.95) blur(.5px);
-    transition: filter 1s ease;
 }
 
 .overlay {
@@ -179,7 +176,7 @@ button:hover::after {
 
 /* Cinema Mode */
 #bg-video.idle-video {
-    filter: brightness(1) blur(0px);
+    filter: brightness(.9) blur(1px);
 }
 .content, #fixed-logo {
     transition: opacity 0.8s ease, filter 0.8s ease;
