@@ -107,17 +107,20 @@ let timeout;
 
 const content = document.querySelector(".content");
 const logo = document.getElementById("fixed-logo");
+const logoNormal = document.querySelector(".logo");
 const video = document.getElementById("bg-video");
 
 function setIdle() {
     if (content) content.classList.add("idle");
     if (logo) logo.classList.add("idle");
+    if (logoNormal) logoNormal.classList.add("idle"); // add second logo
     if (video) video.classList.add("idle-video"); // 🎬 Video hervorheben
 }
 
 function removeIdle() {
     if (content) content.classList.remove("idle");
     if (logo) logo.classList.remove("idle");
+    if (logoNormal) logoNormal.classList.remove("idle"); // remove idle from second logo
     if (video) video.classList.remove("idle-video");
 }
 
