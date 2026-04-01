@@ -134,3 +134,29 @@ function resetTimer() {
 
 // Start
 resetTimer();
+
+const audio = document.getElementById("bg-audio");
+const btn = document.getElementById("sound-toggle");
+
+// Make sure loop is on
+audio.loop = true;
+
+// Toggle playback with the button (direct user gesture)
+btn.onclick = () => {
+  if (audio.paused) {
+    // Unmute and play directly in button click
+    audio.muted = false;
+    audio.volume = 0.6;
+    audio.play().then(() => {
+      btn.textContent = "🔊";
+    }).catch(err => {
+      console.log("Play blocked by browser:", err);
+    });
+  } else {
+    // Pause and reset
+    audio.pause();
+    audio.currentTime = 0;
+    btn.textContent = "🔇";
+  }
+};
+
