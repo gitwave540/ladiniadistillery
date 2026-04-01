@@ -219,6 +219,18 @@ button:hover::after {
     pointer-events: none;
 }       
 
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .logo{width:250px;}
+  .content h1{font-size:2.5rem;margin-bottom:30px;}
+  button{width:180px;font-size:1rem;}
+}
+@media(max-width:480px){
+  .logo{width:180px;}
+  .content h1{font-size:2rem;}
+  button{width:150px;font-size:0.9rem;}
+}
+
 #sound-toggle {
   position: fixed;
   bottom: 20px;
