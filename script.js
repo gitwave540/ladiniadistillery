@@ -106,25 +106,25 @@
 let timeout;
 
 const content = document.querySelector(".content");
-const logos = document.querySelectorAll("#fixed-logo, .logo"); // selects both logos
+const logo = document.getElementById("fixed-logo");
 const video = document.getElementById("bg-video");
 
 function setIdle() {
     if (content) content.classList.add("idle");
-    logos.forEach(logo => logo.classList.add("idle")); // fade out all logos
+    if (logo) logo.classList.add("idle");
     if (video) video.classList.add("idle-video");
 }
 
 function removeIdle() {
     if (content) content.classList.remove("idle");
-    logos.forEach(logo => logo.classList.remove("idle")); // restore all logos
+    if (logo) logo.classList.remove("idle");
     if (video) video.classList.remove("idle-video");
 }
 
 function resetTimer() {
     clearTimeout(timeout);
     removeIdle();
-    timeout = setTimeout(setIdle, 30000);
+    timeout = setTimeout(setIdle, 20000);
 }
 
 // Events
