@@ -15,16 +15,28 @@ html, body {
   overflow: hidden; background: #00000077; /* dark whiskey-brown */
 }
 
+/* ===== h1 ===== 
 h1 {
-    font-family: 'Times New Roman', Times, Didot, serif; /* Roman / elegant serif */
+    font-family: 'Times New Roman', Times, Didot, serif; 
     font-weight: 400;
     font-size: 48px;
-    color: #FFD773;    /* golden tone */
+    color: #FFD773;    
     text-align: center;
     margin-bottom: 50px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    opacity: 0.9;      /* slightly transparent but mostly visible */
+    opacity: 0.9;      
+} */
+
+h1 {
+  font-family: 'Times New Roman', serif;
+  font-size:3.5rem;
+  background: linear-gradient(90deg,#4e3619,#eed171,#8c5a2c); /* golden & brown gradient */
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  text-shadow:0 0 12px rgba(0,0,0,0.5); /* subtle black shadow for luxury feel */
+  margin-bottom:40px; letter-spacing:2px;
+  animation:h1-glow 2s ease-in-out infinite alternate;
 }
+
 /* BACKGROUND VIDEO */
 #bg-video {
     position: fixed;
@@ -118,8 +130,8 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 15px rgba(255, 215, 115, 0.1);
+    background-color: rgba(192, 192, 192, 0.267);
+    box-shadow: 0 4px 15px rgba(255, 229, 165, 0.1);
     transform: translateY(-3px);
 }
 
