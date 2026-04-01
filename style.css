@@ -54,7 +54,7 @@ h1 {
 
 /* ===== CENTER LOGO ===== */
 .logo {
-  position: fixed; top:10%; left:50%; transform:translate(-50%,-50%);
+  position: fixed; top:20%; left:50%; transform:translate(-50%,-50%);
   width:350px; max-width:80%; z-index:0;
   filter: drop-shadow(0 0 30px rgba(255,200,0,0.8)); /* warm golden glow */
   opacity:0; animation:logo-fade 1.8s ease-out forwards;
