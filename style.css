@@ -12,8 +12,9 @@ html, body {
   margin: 0; padding: 0; height: 100%;
   font-family: 'Great Vibes', cursive;
   display: flex; justify-content: center; align-items: center;
-  overflow: hidden; background: #00000077; /* dark whiskey-brown */
+  overflow: hidden; background: auto; /* dark whiskey-brown */
 }
+/* Idle mode: overlay disappears / opaque background */
 
 /* ===== h1 ===== 
 h1 {
